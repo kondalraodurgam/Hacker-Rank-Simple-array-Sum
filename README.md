@@ -8,35 +8,35 @@ Output Format  Print the sum of the array's elements as a single integer.  Sampl
 31 Explanation  We print the sum of the array's elements: .
 
 
-process.stdin.resume();
-process.stdin.setEncoding('ascii');
+            process.stdin.resume();
+            process.stdin.setEncoding('ascii');
 
-var input_stdin = "";
-var input_stdin_array = "";
-var input_currentline = 0;
+            var input_stdin = "";
+            var input_stdin_array = "";
+            var input_currentline = 0;
 
-process.stdin.on('data', function (data) {
-    input_stdin += data;
-});
+            process.stdin.on('data', function (data) {
+                 input_stdin += data;
+            });
 
-process.stdin.on('end', function () {
-    input_stdin_array = input_stdin.split("\n");
-    main();    
-});
+            process.stdin.on('end', function () {
+                input_stdin_array = input_stdin.split("\n");
+                main();    
+            });
 
-function readLine() {
-    return input_stdin_array[input_currentline++];
-}
+            function readLine() {
+                return input_stdin_array[input_currentline++];
+            }
 
-/////////////// ignore above this line ////////////////////
+            /////////////// ignore above this line ////////////////////
 
-function main() {
-    var n = parseInt(readLine());
-    arr = readLine().split(' ');
-    arr = arr.map(Number);
-    var sum = arr.reduce(function(previousValue, currentValue, currentIndex, array) {
-       return previousValue + currentValue;
-    });
-    console.log(sum);
+            function main() {
+                var n = parseInt(readLine());
+                arr = readLine().split(' ');
+                arr = arr.map(Number);
+                var sum = arr.reduce(function(previousValue, currentValue, currentIndex, array) {
+                return previousValue + currentValue;
+            });
+             console.log(sum);
 
-}
+        }  
